@@ -25,3 +25,10 @@ Open the sqlplus interactive console with user `sherlock`:
 with user `sys`:
 
 > docker exec -it oracle-test sqlplus sys/test@test AS SYSDBA
+
+## Deep clean
+
+If by any reason you need to erase the container and all data, run the `delete.sh` script. It will:
+- stop the docker container;
+- remove the docker container;
+- delete the contents of the data folder (requires root privileges).

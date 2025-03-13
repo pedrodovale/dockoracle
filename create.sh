@@ -19,4 +19,7 @@ docker run \
     -e ORACLE_PWD=${DATABASE_PASSWORD} \
     -v ${DATA_FOLDER}:/opt/oracle/oradata \
     -v ${INIT_SCRIPT}:/opt/oracle/scripts/startup/init.sql \
+    -d \
     doctorkirk/oracle-19c
+
+docker logs -f "${CONTAINER_NAME}"
